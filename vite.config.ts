@@ -30,6 +30,8 @@ export default defineConfig({
         preserveModules: true,
         // 模块名使用原始文件路径
         preserveModulesRoot: 'src',
+        // 为 preserveModules 设置正确的 entry signatures 选项
+        preserveEntrySignatures: 'strict',
         // 为 UMD 构建提供全局变量
         globals: {
           react: 'React',
