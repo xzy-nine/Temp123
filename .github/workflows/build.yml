@@ -23,8 +23,11 @@ jobs:
           node-version: '18.x'
           cache: 'npm'
 
+      - name: 生成 package-lock.json 文件
+        run: npm install --package-lock-only
+
       - name: 安装依赖
-        run: npm install --registry=https://registry.npmmirror.com
+        run: npm install
 
       - name: 构建项目
         run: npm run build
